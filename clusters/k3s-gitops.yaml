@@ -1,7 +1,7 @@
 istioBase:
-  enabled: false
+  enabled: true
 istiod:
-  enabled: false
+  enabled: true
 knativeServing:
   enabled: true
 clusterLocalGateway:
