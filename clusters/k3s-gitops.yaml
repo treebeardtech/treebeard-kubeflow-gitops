@@ -1,3 +1,5 @@
+certManager:
+  enabled: true
 istioBase:
   enabled: false
 istiod:
