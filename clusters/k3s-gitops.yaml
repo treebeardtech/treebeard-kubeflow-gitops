@@ -6,6 +6,8 @@ istiod:
   enabled: true
 knativeServing:
   enabled: true
+modelsWebApp:
+  enabled: true
 clusterLocalGateway:
   enabled: true
 kserve:
