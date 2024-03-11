@@ -6,3 +6,13 @@ istiod:
   enabled: true
 kserve:
   enabled: true
+centralDashboard:
+  enabled: true
+  spec:
+    project: default
+    source:
+      path: apps/centraldashboard/upstream/overlays/kserve
+      repoURL: https://github.com/kubeflow/manifests
+      targetRevision: 776d4f4
+      kustomize:
+        patches: [] # disable the default patch to show all menu items
