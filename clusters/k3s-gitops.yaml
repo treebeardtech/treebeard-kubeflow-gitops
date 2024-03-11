@@ -11,7 +11,7 @@ kserve:
 modelsWebApp:
   enabled: true
 kubeflowPipelines:
-  enabled: true
+  enabled: false
 tensorboardsWebApp:
   enabled: true
 centralDashboard:
