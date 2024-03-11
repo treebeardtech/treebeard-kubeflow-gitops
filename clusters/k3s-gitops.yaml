@@ -2,3 +2,15 @@ istioBase:
   enabled: false
 istiod:
   enabled: false
+knativeServing:
+  enabled: true
+clusterLocalGateway:
+  enabled: true
+kserve:
+  enabled: true
+modelsWebApp:
+  enabled: true
+kubeflowPipelines:
+  enabled: true
+tensorboardsWebApp:
+  enabled: true
