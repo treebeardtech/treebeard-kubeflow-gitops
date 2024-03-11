@@ -4,6 +4,8 @@ istiod:
   enabled: true
 knativeServing:
   enabled: true
+clusterLocalGateway:
+  enabled: true
   spec:
     source:
       kustomize:
@@ -16,8 +18,6 @@ knativeServing:
             - op: replace
               path: /spec/template/spec/containers/0/resources/requests/cpu
               value: 10m
-clusterLocalGateway:
-  enabled: true
 kserve:
   enabled: true
 katib:
