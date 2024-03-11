@@ -63,7 +63,7 @@ kubeflowPipelines:
               path: /spec/template/spec/containers/0/resources/requests/cpu
               value: 10m
         - target:
-            kind: Statefulset
+            kind: StatefulSet
             name: metacontroller
             namespace: kubeflow
           patch: |-
