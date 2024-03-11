@@ -4,6 +4,18 @@ istiod:
   enabled: true
 knativeServing:
   enabled: true
+  spec:
+    source:
+      kustomize:
+        patches:
+        - target:
+            kind: Deployment
+            name: cluster-local-gateway
+            namespace: istio-system
+          patch: |-
+            - op: replace
+              path: /spec/template/spec/containers/0/resources/requests/cpu
+              value: 10m
 clusterLocalGateway:
   enabled: true
 kserve:
@@ -14,6 +26,50 @@ modelsWebApp:
   enabled: true
 kubeflowPipelines:
   enabled: true
+  spec:
+    source:
+      kustomize:
+        patches:
+        - target:
+            kind: Deployment
+            name: ml-pipeline
+            namespace: kubeflow
+          patch: |-
+            - op: replace
+              path: /spec/template/spec/containers/0/resources/requests/cpu
+              value: 10m
+        - target:
+            kind: Deployment
+            name: ml-pipeline-persistenceagent
+            namespace: kubeflow
+          patch: |-
+            - op: replace
+              path: /spec/template/spec/containers/0/resources/requests/cpu
+              value: 10m
+        - target:
+            kind: Deployment
+            name: workflow-controller
+            namespace: kubeflow
+          patch: |-
+            - op: replace
+              path: /spec/template/spec/containers/0/resources/requests/cpu
+              value: 10m
+        - target:
+            kind: Deployment
+            name: mysql
+            namespace: kubeflow
+          patch: |-
+            - op: replace
+              path: /spec/template/spec/containers/0/resources/requests/cpu
+              value: 10m
+        - target:
+            kind: Statefulset
+            name: metacontroller
+            namespace: kubeflow
+          patch: |-
+            - op: replace
+              path: /spec/template/spec/containers/0/resources/requests/cpu
+              value: 10m
 tensorboardsWebApp:
   enabled: true
 tensorboardController:
