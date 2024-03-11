@@ -1,6 +1,8 @@
 certManager:
   enabled: true
 istioBase:
-  enabled: false
+  enabled: true
 istiod:
-  enabled: false
+  enabled: true
+kserve:
+  enabled: true
