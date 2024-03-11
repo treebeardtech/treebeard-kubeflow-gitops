@@ -8,6 +8,8 @@ clusterLocalGateway:
   enabled: true
 kserve:
   enabled: true
+katib:
+  enabled: true
 modelsWebApp:
   enabled: true
 kubeflowPipelines:
