@@ -1,0 +1,4 @@
+istioBase:
+  enabled: false
+istiod:
+  enabled: false
